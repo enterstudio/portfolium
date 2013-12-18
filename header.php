@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" dir="<?php bloginfo('text_direction'); ?>" xml:lang="<?php bloginfo('language'); ?>">
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 	<head>
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		<title><?php
@@ -10,10 +10,10 @@
 			if ($site_description && (is_home() || is_front_page()))
 				echo " | $site_description";
 			if ($paged >= 2 || $page >= 2)
-				echo ' | '.sprintf(__('Page %s'), max($paged, $page));
+				echo ' | '.sprintf(__('Page %s', 'portfolium'), max($paged, $page));
 
 			?></title>
-		<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/i/favico.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/i/favico.ico" type="image/x-icon" />
 		<meta http-equiv="Content-language" content="<?php bloginfo('language'); ?>" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -35,7 +35,7 @@
 		</script>
 		<?php endif; ?>
 	</head>
-	<body>
+	<body <?php body_class(); ?>>
 		<div class="wrapper">
 			<div class="header clear">
 				<h1 class="logo"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>

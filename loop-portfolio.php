@@ -5,9 +5,9 @@
 	<div class="post_home">
 		<a href="<?php the_permalink() ?>" class="thumb" title="<?php the_title(); ?>">
 			<?php if (has_post_thumbnail()) : ?>
-				<?php the_post_thumbnail(array(145,145)); ?>
+				<?php the_post_thumbnail(array(145, 145)); ?>
 			<?php else : ?>
-				<img src="<?php bloginfo('template_url'); ?>/i/noimage.jpg" width="145" height="145" alt=""/>
+				<img src="<?php echo get_template_directory_uri(); ?>/i/noimage.jpg" width="145" height="145" alt=""/>
 			<?php endif; ?>
 		</a>
 		<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>

@@ -1,5 +1,34 @@
 <?php
 /**
+ * Portfolium functions and definitions
+ *
+ * Set up the theme and provides some helper functions, which are used in the
+ * theme as custom template tags. Others are attached to action and filter
+ * hooks in WordPress to change core functionality.
+ *
+ * When using a child theme you can override certain functions (those wrapped
+ * in a function_exists() call) by defining them first in your child theme's
+ * functions.php file. The child theme's functions.php file is included before
+ * the parent theme's file, so the child theme functions would be used.
+ *
+ * @link http://codex.wordpress.org/Theme_Development
+ * @link http://codex.wordpress.org/Child_Themes
+ *
+ * Functions that are not pluggable (not wrapped in function_exists()) are
+ * instead attached to a filter or action hook.
+ *
+ * For more information on hooks, actions, and filters,
+ * @link http://codex.wordpress.org/Plugin_API
+ */
+
+/**
+ * Set up the content width value based on the theme's design.
+ */
+if (!isset($content_width)) {
+	$content_width = 785;
+}
+
+/**
  * Portfolium setup.
  *
  * Set up theme defaults and registers support for various WordPress features.
@@ -9,6 +38,19 @@
  * as indicating support post thumbnails.
  */
 function portfolium_setup() {
+	/*
+	 * Make Portfolium available for translation.
+	 *
+	 * Translations can be added to the /languages/ directory.
+	 * If you're building a theme based on Portfolium, use a find and
+	 * replace to change 'portfolium' to the name of your theme in all
+	 * template files.
+	 */
+	load_theme_textdomain('portfolium', get_template_directory().'/languages');
+
+	// Add RSS feed links to <head> for posts and comments.
+	add_theme_support('automatic-feed-links');
+
 	// Enable support for Post Thumbnails
 	add_theme_support('post-thumbnails');
 
@@ -74,8 +116,8 @@ function portfolium_portfolio_init() {
 		'works',
 		'portfolio',
 		array(
-			'label' => __('Portfolio Categories'),
-			'singular_label' => __('Portfolio Category'),
+			'label' => __('Portfolio Categories', 'portfolium'),
+			'singular_label' => __('Portfolio Category', 'portfolium'),
 			'hierarchical' => true,
 			'query_var' => true,
 			'rewrite' => true,
@@ -86,8 +128,8 @@ function portfolium_portfolio_init() {
 	register_post_type(
 		'portfolio',
 		array(
-			'label' => __('Portfolio'),
-			'singular_label' => __('Work'),
+			'label' => __('Portfolio', 'portfolium'),
+			'singular_label' => __('Work', 'portfolium'),
 			'public' => true,
 			'show_ui' => true,
 			'capability_type' => 'post',
@@ -112,7 +154,7 @@ function commentlist($comment, $args, $depth) {
 	?>
 	<li id="li-comment-<?php comment_ID() ?>">
 		<div id="comment-<?php comment_ID(); ?>" <?php comment_class('comment_item clear'); ?>>
-			<div class="comment_meta">Posted on <?php printf(__('%1$s'), get_comment_date()); ?> by <?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?></div>
+			<div class="comment_meta"><?php printf(__('Posted on %s by <cite class="fn">%s</cite>', 'portfolium'), get_comment_date(), get_comment_author_link()); ?></div>
 			<div class="comment_text"><?php comment_text() ?></div>
 		</div>
 	<?php
@@ -143,7 +185,7 @@ function get_blogurl() {
 		echo $blogpage->guid;
 	}
 	else {
-		echo get_option('home');
+		echo home_url();
 	}
 }
 
@@ -167,4 +209,6 @@ function p_posts_link_attributes() {
 	return 'class="previouspostslink"';
 }
 add_filter('next_posts_link_attributes', 'n_posts_link_attributes');
+add_filter('next_comments_link_attributes', 'n_posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'p_posts_link_attributes');
+add_filter('previous_comments_link_attributes', 'p_posts_link_attributes');

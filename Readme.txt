@@ -1,6 +1,6 @@
 Portfolium theme by www.wpshower.com
 
-Portfolium is a clean and flexible Wordpress grid-based portfolio theme designed in a modern & minimalist style. Portfolium is ideal for designers, artists, photographers, and other creative specialists who require a professional portfolio theme. Portfolium theme is coded in valid CSS and HTML and compatible with all browsers. It supports all Wordpress 3.0 features and gives you extra flexibility.
+Portfolium is a clean and flexible WordPress grid-based portfolio theme designed in a modern & minimalist style. Portfolium is ideal for designers, artists, photographers, and other creative specialists who require a professional portfolio theme. Portfolium theme is coded in valid CSS and HTML and compatible with all browsers. It supports all WordPress 3.0 features and gives you extra flexibility.
 
 Plugins Used:
 (not necessarily) WP-PageNavi - http://wordpress.org/extend/plugins/wp-pagenavi/

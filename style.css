@@ -1,11 +1,13 @@
 /*
 Theme Name: Portfolium
+Theme URI: http://wpshower.com/themes/portfolium/
 Author URI: http://www.wpshower.com
-Description: Portfolium is a clean and flexible Wordpress grid-based portfolio theme designed in a modern & minimalist style. Portfolium is ideal for designers, artists, photographers, and other creative specialists who require a professional portfolio theme. Portfolium theme is coded in valid CSS and HTML and compatible with all browsers. It supports all Wordpress 3.0 features and gives you extra flexibility.
+Description: Portfolium is a clean and flexible WordPress grid-based portfolio theme designed in a modern & minimalist style. Portfolium is ideal for designers, artists, photographers, and other creative specialists who require a professional portfolio theme. Portfolium theme is coded in valid CSS and HTML and compatible with all browsers. It supports all WordPress 3.0 features and gives you extra flexibility.
 Author: WPSHOWER
-Version: 1.0
-License: GNU/GPL Version 2 or later. http://www.gnu.org/licenses/gpl.html
-Tags: grids, portfolio, modern, stylish, minimalistic
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dark, two-columns, fixed-layout, custom-menu, featured-images, rtl-language-support, translation-ready
 Copyright: (c) 2010 WPSHOWER
 */
 
@@ -52,6 +54,9 @@ ul.sub-menu li a {background: none !important; font-size: 12px; padding: 0; colo
 
 /*** Content ***/
 
+.sticky {}
+.bypostauthor {}
+
 .middle {padding: 0 15px 61px 0;}
 .container {padding-bottom: 100px;}
 .content {width: 785px; float: right;} 
@@ -74,7 +79,7 @@ ul.sub-menu li a {background: none !important; font-size: 12px; padding: 0; colo
 .page_meta {height: 100px;}
 .page_meta a {color: #ccc; text-decoration: none;}
 .page_meta a:hover {color: #fff18f;}
-.rss, .tags, .search {width: 145px; height: 100px; float: left; margin-left: 15px; font-size: 11px; font-weight: bold; line-height: 85px; color: #ccc; border-bottom: 1px solid #4d4d4d;}
+.rss, .tags, .search-form {width: 145px; height: 100px; float: left; margin-left: 15px; font-size: 11px; font-weight: bold; line-height: 85px; color: #ccc; border-bottom: 1px solid #4d4d4d;}
 .heading {width: 465px; height: 100px; float: left; margin-left: 15px; font-size: 31px; font-weight: bold; line-height: 85px; color: #ccc; border-bottom: 1px solid #4d4d4d;}
 .tags {position: relative;}
 .tags a {background: url("i/tags.gif") 100% 50% no-repeat; padding-right: 10px;}
@@ -85,17 +90,17 @@ ul.sub-menu li a {background: none !important; font-size: 12px; padding: 0; colo
 .taglist li a:hover {color: #fff18f !important;}
 .tags .jsddm_hover a {color: #fff18f; background: url("i/tags.gif") 100% 50% no-repeat; padding-right: 10px;}
 
-.search input {background: none; border: none; color: #ccc; font: bold 11px Helvetica, Arial, sans-serif; width: 145px;}
+.search-form input {background: none; border: none; color: #ccc; font: bold 11px Helvetica, Arial, sans-serif; width: 145px;}
 
 .post_list, .post_single {padding: 30px 0 45px; background: url("i/post_list.gif") 0 100% no-repeat;}
 .post_single {background: none;}
 .post_list a, .post_single a {color: #fff18f; text-decoration: none;}
 .post_list a:hover, .post_single a:hover {text-decoration: underline;}
-.post_list h2, .post_single h2, .page h2 {font-size: 26px; color: #f2f2f2; font-weight: normal; margin-bottom: 15px; padding-left: 175px;}
-.page {padding-top: 15px;}
-.page h2 {padding-left: 0;}
+.post_list h2, .post_single h2, .type-page h2 {font-size: 26px; color: #f2f2f2; font-weight: normal; margin-bottom: 15px; padding-left: 175px;}
+.type-page {padding-top: 15px;}
+.type-page h2 {padding-left: 0;}
 .post_list h2 a, .post_single h2 a, .page h2 a {color: #f2f2f2; text-decoration: none;}
-.post_list h2 a:hover, .post_single h2 a:hover, .page h2 a:hover {color: #fff18f; text-decoration: none;}
+.post_list h2 a:hover, .post_single h2 a:hover, .type-page h2 a:hover {color: #fff18f; text-decoration: none;}
 .post_list_meta, .post_single_meta {width: 145px; margin-left: 15px; float: left;}
 .post_list_meta p, .post_single_meta p, .post_share {color: #ccc; font-size: 11px; margin-bottom: 11px; line-height: 1.7;}
 .post_date {margin-bottom: 0 !important;}
@@ -122,6 +127,7 @@ ul.sub-menu li a {background: none !important; font-size: 12px; padding: 0; colo
 .post_content ol li {list-style: decimal;}
 .post_content blockquote {color: #ccc; font: italic 16px Georgia, Geneva, "Times New Roman", times; padding-left: 70px; margin: 15px 0;}
 .post_content blockquote p {color: #ccc; font: italic 16px Georgia, Geneva, "Times New Roman", times;}
+.post_content .tag-links { margin-top: 24px; }
 
 /*** Images ***/
 
@@ -174,13 +180,13 @@ ul.sub-menu li a {background: none !important; font-size: 12px; padding: 0; colo
 .comment_text {width: 785px; margin-left: 15px; float: left; color: #ccc; font-size: 12px; line-height: 1.5;}
 
 #respond {margin-top: 30px;}
-.respond_meta {float: left; width: 145px; margin-left: 15px; color: #ccc; font-size: 12px; font-weight: bold;}
-.comment_form {padding-bottom: 60px; width: 785px; float: left; margin-left: 15px;}
+#reply-title {float: left; width: 145px; margin-left: 15px; color: #ccc; font-size: 12px; font-weight: bold;}
+.comment-form {padding-bottom: 60px; width: 785px; float: left; margin-left: 15px;}
 .comment_fields {margin-bottom: 25px;}
-#author, #email, #url {width: 225px; float: left; margin: 0 15px 0 0; padding: 0; color: #ccc; font-size: 12px; border: none; border-bottom: 1px solid #4d4d4d; background: none; padding-bottom: 8px; overflow: hidden;}
-#url {width: 305px; margin: 0;}
-.comment_form textarea {width: 785px; height: 125px; overflow: auto; border: none; border-bottom: 1px solid #4d4d4d; background: none; color: #ccc; font: 12px Helvetica, Arial, sans-serif; margin-bottom: 15px;}
-.comment_submit {text-align: right;}
+#author, #email, #url {width: 225px; float: left; margin: 0 15px 25px 0; padding: 0; color: #ccc; font-size: 12px; border: none; border-bottom: 1px solid #4d4d4d; background: none; padding-bottom: 8px; overflow: hidden;}
+#url {width: 305px; margin: 0 0 25px;}
+.comment-form textarea {width: 785px; height: 125px; overflow: auto; border: none; border-bottom: 1px solid #4d4d4d; background: none; color: #ccc; font: 12px Helvetica, Arial, sans-serif; margin-bottom: 15px;}
+.form-submit {text-align: right;}
 #submit {width: 170px; height: 40px; padding: 0 15px; background: #4d4d4d url("i/comment_submit.gif") 146px 17px no-repeat; border: none; text-align: left; color: #f2f2f2; font: 12px Helvetica, Arial, sans-serif; cursor: pointer;}
 #submit:hover {background: #fff18f url("i/comment_submit.gif") 146px -26px no-repeat; color: #4d4d4d;}
 .comment_message {color: #f2f2f2; font-size: 12px; margin-bottom: 12px;}

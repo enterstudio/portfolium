@@ -1,8 +1,8 @@
 <div class="pagination clear">
 	<?php if (get_previous_posts_link() || get_next_posts_link()) : ?>
 	<div class="pagination_ctrl">
-		<?php previous_posts_link(__('')); ?>
-		<?php next_posts_link(__('')); ?>
+		<?php previous_posts_link(''); ?>
+		<?php next_posts_link(''); ?>
 	</div>
 	<?php endif; ?>
 	<div class="pagination_pages">
