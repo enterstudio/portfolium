@@ -63,27 +63,27 @@ msgstr ""
 msgid "Latest from blog"
 msgstr ""
 
-#: portfolium/functions.php:59
+#: portfolium/functions.php:65
 msgid "Header"
 msgstr ""
 
-#: portfolium/functions.php:119
+#: portfolium/functions.php:125
 msgid "Portfolio Categories"
 msgstr ""
 
-#: portfolium/functions.php:120
+#: portfolium/functions.php:126
 msgid "Portfolio Category"
 msgstr ""
 
-#: portfolium/functions.php:131
+#: portfolium/functions.php:137
 msgid "Portfolio"
 msgstr ""
 
-#: portfolium/functions.php:132
+#: portfolium/functions.php:138
 msgid "Work"
 msgstr ""
 
-#: portfolium/functions.php:157
+#: portfolium/functions.php:163
 #, php-format
 msgid "Posted on %s by <cite class=\"fn\">%s</cite>"
 msgstr ""
@@ -128,4 +128,12 @@ msgstr ""
 
 #: portfolium/loop.php:22
 msgid "Read more"
+msgstr ""
+
+#: portfolium/inc/back-compat.php:31 portfolium/inc/back-compat.php:41
+#: portfolium/inc/back-compat.php:55
+#, php-format
+msgid ""
+"Portfolium requires at least WordPress version 3.6. You are running version "
+"%s. Please upgrade and try again."
 msgstr ""
