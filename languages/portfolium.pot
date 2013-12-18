@@ -63,27 +63,27 @@ msgstr ""
 msgid "Latest from blog"
 msgstr ""
 
-#: portfolium/functions.php:49
+#: portfolium/functions.php:59
 msgid "Header"
 msgstr ""
 
-#: portfolium/functions.php:109
+#: portfolium/functions.php:119
 msgid "Portfolio Categories"
 msgstr ""
 
-#: portfolium/functions.php:110
+#: portfolium/functions.php:120
 msgid "Portfolio Category"
 msgstr ""
 
-#: portfolium/functions.php:121
+#: portfolium/functions.php:131
 msgid "Portfolio"
 msgstr ""
 
-#: portfolium/functions.php:122
+#: portfolium/functions.php:132
 msgid "Work"
 msgstr ""
 
-#: portfolium/functions.php:147
+#: portfolium/functions.php:157
 #, php-format
 msgid "Posted on %s by <cite class=\"fn\">%s</cite>"
 msgstr ""
